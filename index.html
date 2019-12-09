@@ -87,21 +87,21 @@
         <!-- Cat walking GIF from: http://www.anniemation.com/clip_art/graphics.html -->
         <img id="cat" src="https://www.kasandbox.org/programming-images/misc/cat-walk.gif">
     </div>
-    </body>
-    <script>
+        <script>
         var catEl = document.getElementById("cat");
 
-var startTime = new Date().getTime();    
-var walkTheCat = function(){
-    var currTime = new Date().getTime();
-    var newLeft = ((currTime - startTime) / 1000) * 100;
-    var newTop = 0//((currTime - startTime) / 1000) * 100;
-    if (newLeft > 1300){ startTime = currTime};
-    console.log(newLeft);
-    catEl.style.left = newLeft + "px";
-    catEl.style.top = newTop + "px";
-    window.requestAnimationFrame(walkTheCat);
-};
-walkTheCat();
+        var startTime = new Date().getTime();    
+        var walkTheCat = function(){
+        var currTime = new Date().getTime();
+        var newLeft = ((currTime - startTime) / 1000) * 100;
+        var newTop = 0//((currTime - startTime) / 1000) * 100;
+        if (newLeft > 1300){ startTime = currTime};
+        console.log(newLeft);
+        catEl.style.left = newLeft + "px";
+        catEl.style.top = newTop + "px";
+        window.requestAnimationFrame(walkTheCat);
+        };
+        walkTheCat();
     </script>
+    </body>
         </html>
