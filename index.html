@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> //STYLE = CSS Y SCRIPT = JS
 <html>
     <head>
         <title>Project: Recipe book</title>
@@ -23,10 +23,6 @@
             #referencia-cocina{
                 position:relative;
                 text-align:center;
-            }
-            #hopper{
-                position:absolute;
-                left: 400px;
             }
             #tortilla{
                 position: absolute;
@@ -67,6 +63,10 @@
                 top:50px;
                 font-family: cursive;
             }
+            #cat {
+                position: absolute;
+                left: 0px;
+            }
         </style>
     </head>
     <body>
@@ -83,6 +83,25 @@
             <p><a href="https://pixabay.com/es/photos/cuchara-de-madera-vajilla-4546584/">Utensilios de cocina</a>, <a href="https://pixabay.com/es/users/haus_drei_photography-1116376/">Haus_Drei_Photography</a>, <a href="https://pixabay.com/es/">Pixabay</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.es_ES">licencia CC0</a>.
             </p>
         </div>
-        <img src="https://www.kasandbox.org/programming-images/avatars/Hopper-jumping.gif" id="hopper">
-        </body>
+        <div>
+        <!-- Cat walking GIF from: http://www.anniemation.com/clip_art/graphics.html -->
+        <img id="cat" src="https://www.kasandbox.org/programming-images/misc/cat-walk.gif">
+    </div>
+    </body>
+    <script>
+        var catEl = document.getElementById("cat");
+
+var startTime = new Date().getTime();    
+var walkTheCat = function(){
+    var currTime = new Date().getTime();
+    var newLeft = ((currTime - startTime) / 1000) * 100;
+    var newTop = 0//((currTime - startTime) / 1000) * 100;
+    if (newLeft > 1300){ startTime = currTime};
+    console.log(newLeft);
+    catEl.style.left = newLeft + "px";
+    catEl.style.top = newTop + "px";
+    window.requestAnimationFrame(walkTheCat);
+};
+walkTheCat();
+    </script>
         </html>
