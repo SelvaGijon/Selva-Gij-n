@@ -4,3 +4,5 @@ En este archivo llamado README.md debía estar el enlace a la web creada junto c
 https://selvagijon.github.io/hosting/
 
 La estructura del repositorio tenía que ser la siguiente: carpetas images, styles y scripts, y archivos README.md, LICENSE e index.html. Además, tenían que estar los recursos JS de intercambio de imágenes al hacer clic sobre ellas, de campo de texto (que cambie algún texto de la web al introducirlo el usuario) y de objeto de movimiento. También había que incorporar una fuente llamativa o distinta. La licencia debía ser de recurso no-software (CC). La página web tendría una imagen aparte de las dos de los recursos JS.
+
+LA PÁGINA WEB TIENE QUE TENER ESTÉTICA SIMILAR A ALGUNA DE LAS RECOMENDADAS INDICÁNDOLO AQUÍ.
