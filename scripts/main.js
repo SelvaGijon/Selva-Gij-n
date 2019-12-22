@@ -4,10 +4,10 @@ let myImage = document.querySelector('img');
 
 myImage.onclick = function() {
   let mySrc = myImage.getAttribute('src');
-  if(mySrc === 'images/firefox-icon.png') {
-    myImage.setAttribute ('src','images/firefox2.png');
+  if(mySrc === 'images/wooden-spoon-4546584_960_720.png.png') {
+    myImage.setAttribute ('src','tortilla-622974_960_720.png');
   } else {
-    myImage.setAttribute ('src','images/firefox-icon.png');
+    myImage.setAttribute ('src','images/wooden-spoon-4546584_960_720.png.png');
   }
 }
 
