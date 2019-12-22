@@ -22,7 +22,7 @@ function setUserName() {
     setUserName();
   } else {
     localStorage.setItem('name', myName);
-    myHeading.innerHTML = 'Bienvenido a Miva´s world, ' + myName + '. ¡Disfruta!';
+    myHeading.innerHTML = 'Bienvenido a MiVä´s World, ' + myName + '. ¡Disfruta!';
   }
 }
 
@@ -30,7 +30,7 @@ if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   let storedName = localStorage.getItem('name');
-  myHeading.innerHTML = 'Bienvenido a Miva´s world, ' + storedName + '. ¡Disfruta!';
+  myHeading.innerHTML = 'Bienvenido a MiVä´s World, ' + storedName + '. ¡Disfruta!';
 }
 
 myButton.onclick = function() {
