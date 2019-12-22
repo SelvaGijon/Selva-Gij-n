@@ -45,7 +45,7 @@ var walkTheCat = function(){
     var currTime = new Date().getTime();
     var newLeft = ((currTime - startTime) / 1000) * 100;
     var newTop = 0//((currTime - startTime) / 1000) * 100;
-    if (newLeft > 1300){ startTime = currTime};
+    if (newLeft > 1000){ startTime = currTime};
     console.log(newLeft);
     catEl.style.left = newLeft + "px";
     catEl.style.top = newTop + "px";
