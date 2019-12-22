@@ -17,7 +17,7 @@ let myButton = document.querySelector('button');
 let myHeading = document.querySelector('h1');
 
 function setUserName() {
-  let myName = prompt('Please enter your name.');
+  let myName = prompt('Inserta tu apodo. El que más te guste. ;-)');
   if(!myName || myName === null) {
     setUserName();
   } else {
