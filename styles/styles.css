@@ -1,0 +1,64 @@
+
+            .contenedor {
+                position: relative;
+                height: 300px;
+                left:560px;
+            }
+
+            .contenedor img {
+                position: absolute;
+                height: 300px;
+                left: 0;
+                transition: opacity 1.5s ease-in-out;
+            }
+            
+            .contenedor img.top:hover {
+                opacity: 0;
+            }
+            #referencia-cocina{
+                position:relative;
+                text-align:center;
+            }
+            #hopper{
+                position:absolute;
+                left: 400px;
+            }
+            #tortilla{
+                position: absolute;
+                top: 400px;
+                right: 50px;
+                float: right;
+                height:300px;
+            }
+            #referencia-tortilla{
+                position: absolute;
+                top: 700px;
+                right: 0px;
+                background-color:rgb(237, 220, 237);
+            }
+            #table-1{
+                color:rgb(24, 66, 10);
+            }
+            #elaboracin-1{
+                font-family:sans-serif;
+            }
+            #arroz{
+                position:relative;
+                top:0px;
+                height:300px;
+            }
+            #referencia-arroz{
+                position:absolute;
+                top:1860px;
+                background-color:rgb(177, 224, 208);
+            }
+            #table-2{
+                position:relative;
+                float:right;
+                color:rgb(107, 24, 3);
+            }
+            #elaboracin-y-pasos-2{
+                position:relative;
+                top:50px;
+                font-family: cursive;
+            }
