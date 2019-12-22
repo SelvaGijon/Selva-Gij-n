@@ -22,7 +22,7 @@ function setUserName() {
     setUserName();
   } else {
     localStorage.setItem('name', myName);
-    myHeading.innerHTML = 'Bienvenido al mundo. Acabas de renacer, ' + myName;
+    myHeading.innerHTML = 'Bienvenido a Miva´s world ' + myName;
   }
 }
 
@@ -30,7 +30,7 @@ if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   let storedName = localStorage.getItem('name');
-  myHeading.innerHTML = 'Bienvenido al mundo. Acabas de renacer, ' + storedName;
+  myHeading.innerHTML = 'Bienvenido a Miva´s world ' + storedName;
 }
 
 myButton.onclick = function() {
