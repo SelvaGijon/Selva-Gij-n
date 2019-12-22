@@ -1,4 +1,4 @@
-<!DOCTYPE html> //STYLE = CSS Y SCRIPT = JS Desafío: acaricia al gato
+<!DOCTYPE html>
 <html>
     <head>
         <title>Project: Recipe book</title>
@@ -23,6 +23,10 @@
             #referencia-cocina{
                 position:relative;
                 text-align:center;
+            }
+            #hopper{
+                position:absolute;
+                left: 400px;
             }
             #tortilla{
                 position: absolute;
@@ -63,10 +67,6 @@
                 top:50px;
                 font-family: cursive;
             }
-            #cat {
-                position: absolute;
-                left: 0px;
-            }
         </style>
     </head>
     <body>
@@ -83,25 +83,180 @@
             <p><a href="https://pixabay.com/es/photos/cuchara-de-madera-vajilla-4546584/">Utensilios de cocina</a>, <a href="https://pixabay.com/es/users/haus_drei_photography-1116376/">Haus_Drei_Photography</a>, <a href="https://pixabay.com/es/">Pixabay</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.es_ES">licencia CC0</a>.
             </p>
         </div>
-        <div>
-        <!-- Cat walking GIF from: http://www.anniemation.com/clip_art/graphics.html -->
-        <img id="cat" src="https://www.kasandbox.org/programming-images/misc/cat-walk.gif">
-    </div>
-        <script>
-        var catEl = document.getElementById("cat");
+        <img src="https://www.kasandbox.org/programming-images/avatars/Hopper-jumping.gif" id="hopper">
+        
+        <h2>Índice</h2>
+        
+        <h3><a href="#receta-1">Tortilla de patata con cebolla</a></h3>
+        <ol>
+            <li><a href="#tiempo-1">Tiempo.</a></li>
+            <li><a href="#comensales-1">Comensales.</a></li>
+            <li><a href="#ingredientes-1">Ingredientes.</a></li>
+            <li><a href="#elaboración-1">Elaboración.</a></li>
+        </ol>
+        
+        <h3><a href="#receta-2">Arroz cremoso con mejillones</a></h3>
+        <ol>
+            <li><a href="#tiempo-2">Tiempo.</a></li>
+            <li><a href="#comensales-2">Comensales.</a></li>
+            <li><a href="#ingredientes-2">Ingredientes.</a></li>
+            <li><a href="#elaboración-2">Elaboración.</a></li>
+        </ol>
+        
+        <h2 id="receta-1">Tortilla de patata con cebolla</h2>
+        
+        <ul>
+            <li id="tiempo-1">Tiempo: 45 minutos.</li>
+            <li id="comensales-1">Comensales: 4 personas.</li>
+        </ul>
+        <img id="tortilla" src="https://cdn.pixabay.com/photo/2015/02/03/20/46/tortilla-622974_960_720.jpg">
+        <div id="referencia-tortilla">
+            <p><a href="https://pixabay.com/es/photos/tortilla-espa%C3%B1ola-tortilla-de-patata-622974/">Tortilla de patata</a>, <a href="https://pixabay.com/es/users/hurdiantonia0-746999/">hurdiantonia0</a>, <a href="https://pixabay.com/es/">Pixabay</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.es_ES">licencia CC0</a>.
+            </p>
+        </div>
+        <table id="table-1">
+            <thead>
+                <tr>
+                    <th id="ingredientes-1">Ingredientes</th>
+                    <th>Cantidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Patatas.</td>
+                    <td>700 gramos.</td>
+                </tr>
+                <tr>
+                    <td>Cebolla.</td>
+                    <td>300 gramos.</td>
+                </tr>
+                <tr>
+                    <td>Huevos.</td>
+                    <td>6.</td>
+                </tr>
+                <tr>
+                    <td>Sal.</td>
+                    <td>Al gusto.</td>
+                </tr>
+                <tr>
+                    <td>Aceite de oliva.</td>
+                    <td>Al gusto.</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="elaboracin-1">
+        <h3 id="elaboración-1">Elaboración</h3>
+        <p><strong>Paso 1:</strong> Pelar la cebolla y cortarla en juliana.
+</p>
+        <p><strong>Paso 2:</strong> Poner la cebolla en una sartén a fuego muy lento y dejar que se haga muy despacio, removiendo de vez en cuando para que se vaya pochando hasta caramelizarse.
+</p>
+        <p><strong>Paso 3:</strong> Mientras la cebolla se hace, pelar las patatas y cortarlas en rodajas finas, procurando que sean de tamaño uniforme.
+</p>
+        <p><strong>Paso 4:</strong> Dejarlas en agua durante 15 minutos y poner una sartén con aceite de oliva abundante en el fuego.
+</p>
+        <p><strong>Paso 5:</strong> Antes de que el aceite se caliente, añadir las patatas y dejar que se vayan friendo muy despacio, partiendo de un aceite casi en frío para que las patatas se confiten.
+</p>
+        <p><strong>Paso 6:</strong> Sacar las patatas y escurrirlas bien del aceite y ponerlas en un bol grande.
+</p>
+        <p><strong>Paso 7:</strong>  Escurrir la cebolla cuando esté en su punto, y ponerla sobre las patatas.
+</p>
+        <p><strong>Paso 8:</strong> Batir los huevos y añadirlos al bol, removiendo con un tenedor para que se mezclen bien los tres ingredientes.
+</p>
+        <p><strong>Paso 9:</strong> Cuajar la tortilla en una sartén con una cucharada de aceite durante unos tres o cuatro minutos y darle la vuelta.
+</p>
+        <p><strong>Paso 10:</strong> Servir la tortilla y disfrutarla.
+</p></div>
 
-        var startTime = new Date().getTime();    
-        var walkTheCat = function(){
-        var currTime = new Date().getTime();
-        var newLeft = ((currTime - startTime) / 1000) * 100;
-        var newTop = 0//((currTime - startTime) / 1000) * 100;
-        if (newLeft > 1300){ startTime = currTime};
-        console.log(newLeft);
-        catEl.style.left = newLeft + "px";
-        catEl.style.top = newTop + "px";
-        window.requestAnimationFrame(walkTheCat);
-        };
-        walkTheCat();
-    </script>
+        <h2 id="receta-2">Arroz cremoso con mejillones</h2>
+        
+        <ul>
+            <li id="tiempo-2">Tiempo: 1 hora y 41 minutos.</li>
+            <li id="comensales-2">Comensales: 4 personas.</li>
+        </ul>
+        
+        <img id="arroz" src="https://cdn.pixabay.com/photo/2016/06/28/17/37/food-1485024_960_720.jpg">
+        <div id="referencia-arroz">
+            <p><a href="https://pixabay.com/es/photos/los-alimentos-risotto-azafr%C3%A1n-1485024/">Arroz</a>, <a href="https://pixabay.com/es/users/danatentis-2743349/">DanaTentis</a>, <a href="https://pixabay.com/es/">Pixabay</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.es_ES">licencia CC0</a>.
+            </p>
+        </div>
+        <table border="1" id="table-2">
+            <thead>
+                <tr>
+                    <th id="ingredientes-2">Ingredientes</th>
+                    <th>Cantidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mejillones.</td>
+                    <td>1,5 kilogramos.</td>
+                </tr>
+                <tr>
+                    <td>Arroz bomba.</td>
+                    <td>300 gramos.</td>
+                </tr>
+                <tr>
+                    <td>Cebolla.</td>
+                    <td>100 gramos.</td>
+                </tr>
+                <tr>
+                    <td>Aceite de oliva virgen extra.</td>
+                    <td>50 gramos.</td>
+                </tr>
+                <tr>
+                    <td>Pimiento verde italiano.</td>
+                    <td>50 gramos.</td>
+                </tr>
+                <tr>
+                    <td>Salsa de tomate.</td>
+                    <td>50 gramos.</td>
+                </tr>
+                <tr>
+                    <td>Vino blanco.</td>
+                    <td>50 mililitros.</td>
+                </tr>
+                <tr>
+                    <td>Caldo de pescado o fumet.</td>
+                    <td>1 litro.</td>
+                </tr>
+                <tr>
+                    <td>Cayena.</td>
+                    <td>1.</td>
+                </tr>
+                <tr>
+                    <td>Diente de ajo.</td>
+                    <td>2.</td>
+                </tr>
+                <tr>
+                    <td>Pimentón dulce.</td>
+                    <td>1/2 cucharadita.</td>
+                </tr>
+                <tr>
+                    <td>Azafrán.</td>
+                    <td>Al gusto.</td>
+                </tr>
+                <tr>
+                    <td>Sal y pimienta.</td>
+                    <td>Al gusto.</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="elaboracin-y-pasos-2">
+        <h3 id="elaboración-2">Elaboración</h3>
+        <p><strong>Paso 1:</strong> Poner una cazuela al fuego con un poco de agua en el fondo y los mejillones limpios de sus barbas.
+</p>
+        <p><strong>Paso 2:</strong> Añadir un poco de sal y tapar la olla con una tapa, subir el fuego y esperar a que el agua hierva y se vea abrir los mejillones.
+</p>
+        <p><strong>Paso 3:</strong> Retirar del fuego y sacar una vez templados los mejillones de sus cáscaras, reservar en un plato y colar el agua de cocción que se utilizará para añadir al arroz.
+</p>
+        <p><strong>Paso 4:</strong> En una cazuela añadir el aceite de oliva, la cayena y los ajos picados, calentar y sofreír la cebolla y el pimiento picaditos durante 15 minutos a fuego bajo.
+</p>
+        <p><strong>Paso 5:</strong> Añadir el pimentón, el vino blanco, el azafrán, el tomate frito y cocinar durante otros cinco minutos.
+</p>
+        <p><strong>Paso 6:</strong> Echar el caldo de pescado y el agua, un litro aproximadamente, a la olla y dejar cocinar a fuego muy lento 10 minutos.
+</p>
+        <p><strong>Paso 7:</strong> Añadir el arroz y cocinar 20 minutos, cuando falten cinco minutos para acabar echar los mejillones reservados, servir bien caliente y disfrutarlos.
+</p>
+</div>
     </body>
-        </html>
+</html>
