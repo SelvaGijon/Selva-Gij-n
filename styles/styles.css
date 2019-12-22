@@ -1,4 +1,12 @@
-
+html {
+  background-color: rgb(234,158,220);
+}
+body {
+  background-color: #ecc3ef;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
             .contenedor {
                 position: relative;
                 height: 300px;
