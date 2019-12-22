@@ -36,3 +36,19 @@ if(!localStorage.getItem('name')) {
 myButton.onclick = function() {
   setUserName();
 }
+
+// El gato desplazándose <3
+var catEl = document.getElementById("cat");
+
+var startTime = new Date().getTime();    
+var walkTheCat = function(){
+    var currTime = new Date().getTime();
+    var newLeft = ((currTime - startTime) / 1000) * 100;
+    var newTop = 0//((currTime - startTime) / 1000) * 100;
+    if (newLeft > 1300){ startTime = currTime};
+    console.log(newLeft);
+    catEl.style.left = newLeft + "px";
+    catEl.style.top = newTop + "px";
+    window.requestAnimationFrame(walkTheCat);
+};
+walkTheCat();
